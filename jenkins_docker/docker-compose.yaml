@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  s_jenkins:
+    container_name: container_jenkins
+    image: jenkinsdoc:latest
+    ports:
+      - 8080:8080
+      - 5000:5000
+    volumes:
+      - /var/run/docker.sock/:/var/run/docker.sock/
+      - /home/dell/Desktop/jenkins_docker/data/:/var/jenkins_home
+  # serv_p4:
+  #   container_name: name_im
+  #   image: python:3.7.14-alpine
